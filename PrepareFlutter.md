@@ -4,6 +4,10 @@
     ```bash
     flutter create <your-program>
     ```
+    For creating a project at current directory, use this command:
+    ```bash
+    flutter create .
+    ```
 2. To install Flutter libraries, 
     add packages to `pubspec.yaml` file under `dependencies` or `dev_dependencies`
     and use this command:
@@ -45,5 +49,5 @@
     ```
 8. To build Flutter project, use this command:
     ```bash
-    flutter build <your-platform>
+    flutter build [<your-platform>]
     ```
