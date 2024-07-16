@@ -34,7 +34,7 @@
             slash_for_doc_comments: ignore
     ```
 6. To change application content size,
-    for MacOS, update `macos/Runner/Base.lproj/MainMenu.xib` file:
+    For MacOS, update `macos/Runner/Base.lproj/MainMenu.xib` file:
     ```xml
     <rect key="contentRect" x="335" y="390" width="<app-width>" height="<app-height>"/>
     <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1577"/>
@@ -43,9 +43,18 @@
         <autoresizingMask key="autoresizingMask"/>
     </view>
     ```
+    For Windows, update `windows/runner/main.cpp` file:
+    ```cpp
+    Win32Window::Point origin(<app-left>, <app-top>);
+    Win32Window::Size size(<app-width>, <app-height>);
+    ```
 7. To run Flutter project, use this command:
     ```bash
     flutter run
+    ```
+    To run on Chrome with HTTP request, use this command:
+    ```bash
+    flutter run -d chrome --web-browser-flag "--disable-web-security"
     ```
 8. To build Flutter project, use this command:
     ```bash
